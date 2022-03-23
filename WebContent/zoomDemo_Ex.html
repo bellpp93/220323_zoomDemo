@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery zoom 실습 예제</title>
+<style>
+	p { 
+		position:absolute;
+		top:3px;
+		right:28px;
+		font:bold 20px/1 sans-serif;
+	}
+	.zoom {
+		display:inline-block;
+		position:relative;
+	}
+	.zoom img {
+		width:600px;
+		height:300px;
+	}
+</style>
+<!-- jQuery 인클루드 -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- zoom 자바스크립트 라이브러리 인클루드 -->
+<script src="js/jquery.zoom.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#ex1').zoom();
+		$('#ex2').zoom({on:'grab'});
+		$('#ex3').zoom({on:'click'});
+		$('#ex4').zoom({on:'toggle'});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<div class="zoom" id="ex1">
+			<img src="./zoomImages/main_banner_1.jpg"/>
+			<p>마우스를 올려보세요!!</p>
+		</div>
+	</div>
+	
+	<div>
+		<div class="zoom" id="ex2">
+			<img src="./zoomImages/main_banner_2.jpg"/>
+			<p>클릭된 동안 땡겨짐</p>
+		</div>
+	</div>
+	
+	<div>
+		<div class="zoom" id="ex3">
+			<img src="./zoomImages/main_banner_3.gif"/>
+			<p>클릭하면 줌 작동 토글</p>
+		</div>
+	</div>
+	
+	<div>
+		<div class="zoom" id="ex4">
+			<img src="./zoomImages/main_banner_4.gif"/>
+			<p>클릭한 부분 땡겨짐 토글</p>
+		</div>
+	</div>
+</body>
+</html>
